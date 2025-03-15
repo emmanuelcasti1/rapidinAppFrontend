@@ -1,0 +1,80 @@
+/* Contenedor principal */
+.editar-domiciliario-container {
+    max-width: 1200px; /* Aumentamos el ancho para acomodar ambas secciones */
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Sección superior: Búsqueda y formulario */
+  .seccion-superior {
+    display: flex; /* Usamos Flexbox para organizar en fila */
+    justify-content: space-between; /* Separa la búsqueda y el formulario */
+    gap: 20px; /* Espacio entre la búsqueda y el formulario */
+  }
+  
+  /* Estilos para la búsqueda y el formulario */
+  .busqueda-section,
+  .form-section {
+    width: 48%; /* Ancho de cada sección */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  /* Estilos para los grupos de formulario */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  

@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Navbar from './components/Navbar';
+import Inicio from './pages/Inicio';
+import Domiciliarios from './pages/Domiciliario';
+import Domicilio from './pages/Domicilio';
+import Rapidin from './pages/Rapidin';
+import EditarDomiciliario from './pages/EditarDomiciliario';
+import EliminarDomiciliario from './pages/EliminarDomiciliario';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app-container">
+        <header className="header">
+          DOMICILIOS EL RAPIDIN
+        </header>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/domicilio" element={<Domicilio />} />
+          <Route path="/domiciliarios" element={<Domiciliarios />} />
+          <Route path="/rapidin" element={<Rapidin />} />
+          <Route path="/editarDomiciliario" element={<EditarDomiciliario />} />
+          <Route path="/eliminarDomiciliario" element={<EliminarDomiciliario />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,92 @@
+/* Contenedor principal */
+.eliminar-domiciliario-container {
+    max-width: 1200px; /* Aumentamos el ancho para acomodar ambas secciones */
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Sección superior: Búsqueda y información */
+  .seccion-superior {
+    display: flex; /* Usamos Flexbox para organizar en fila */
+    justify-content: space-between; /* Separa la búsqueda y la información */
+    gap: 10px; /* Reducimos el espacio entre la búsqueda y la información */
+  }
+  
+  /* Estilos para la búsqueda y la información */
+  .busqueda-section,
+  .info-domiciliario {
+    width: 50%; /* Ajustamos el ancho para que estén más cerca */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  /* Estilos para los grupos de formulario */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo específico para el botón de eliminar */
+  .boton-eliminar {
+    background-color: #dc3545; /* Color rojo */
+    color: white; /* Texto en blanco */
+  }
+  
+  .boton-eliminar:hover {
+    background-color: #c82333; /* Color rojo más oscuro al pasar el mouse */
+  }
+  
+  /* Información del domiciliario */
+  .info-domiciliario {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  .domiciliario-info {
+    margin-bottom: 10px;
+  }
+  
+  .domiciliario-info strong {
+    color: #333;
+  }

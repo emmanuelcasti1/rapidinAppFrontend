@@ -1,0 +1,82 @@
+/* Contenedor principal */
+.domicilio-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  /* Columnas */
+  .columna-izquierda,
+  .columna-derecha {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Búsqueda por fecha */
+  .busqueda-fecha {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .input-fecha {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .boton-buscar {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .boton-buscar:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Resultados de la búsqueda por fecha */
+  .resultados-fecha {
+    margin-top: 20px;
+  }
+  
+  .resultados-fecha ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .resultados-fecha li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+  }
+  
+  /* Lista de domicilios generales */
+  .lista-domicilios {
+    max-height: 80vh; /* Altura máxima con deslizador */
+    overflow-y: auto; /* Habilitar deslizador vertical */
+    padding-right: 10px; /* Espacio para el deslizador */
+  }
+  
+  .lista-domicilios ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .lista-domicilios li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+  }
