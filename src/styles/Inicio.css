@@ -1,103 +1,140 @@
-
-
 /* Contenedor principal */
 .inicio-container {
-    display: flex; /* Usar Flexbox para organizar en dos columnas */
-    justify-content: space-between; /* Separar el formulario y la lista */
-    padding: 20px;
-    gap: 20px; /* Espacio entre el formulario y la lista */
-    max-width: none; /* Eliminar el ancho máximo */
-    margin: 0; /* Eliminar el margen automático */
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sección del formulario */
+.form-section {
+  flex: 1; /* Permite que el formulario se ajuste */
+  min-width: 300px; /* Evita que se encoja demasiado */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+}
+
+/* Sección de la lista */
+.list-section {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Estilos para el formulario */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para la lista de domiciliarios */
+.domiciliarios-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.domiciliario-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.domiciliario-item:last-child {
+  border-bottom: none;
+}
+
+.domiciliario-info {
+  margin-bottom: 10px;
+}
+
+.domiciliario-info strong {
+  color: #333;
+}
+
+/* Estilo para resaltar el total de domicilios */
+.total-domicilios {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .inicio-container {
+      flex-direction: column; /* Apila los elementos en pantallas medianas */
+      align-items: center;
   }
-  
-  /* Sección del formulario */
-  .form-section {
-    width: 45%; /* Ancho del formulario */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: white;
-  }
-  
-  /* Sección de la lista */
+
+  .form-section,
   .list-section {
-    width: 50%; /* Ancho de la lista */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: white;
-    max-height: 80vh; /* Altura máxima para el deslizador */
-    overflow-y: auto; /* Deslizador vertical */
+      width: 100%; /* Ocuparán todo el ancho en pantallas medianas */
   }
-  
-  /* Estilos para el formulario */
-  .form-group {
-    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .inicio-container {
+      padding: 15px;
   }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
+
+  .form-section,
+  .list-section {
+      padding: 15px;
   }
-  
-  .form-group input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .inicio-container {
+      padding: 10px;
   }
-  
-  .form-group input:focus {
-    border-color: #007bff;
-    outline: none;
+
+  .form-section,
+  .list-section {
+      padding: 10px;
   }
-  
+
   button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
+      width: 100%;
+      padding: 12px;
   }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Estilos para la lista de domiciliarios */
-  .domiciliarios-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .domiciliario-item {
-    padding: 15px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .domiciliario-item:last-child {
-    border-bottom: none;
-  }
-  
-  .domiciliario-info {
-    margin-bottom: 10px;
-  }
-  
-  .domiciliario-info strong {
-    color: #333;
-  }
-  
-  /* Estilo para resaltar el total de domicilios */
-  .total-domicilios {
-    color: #28a745;
-    font-weight: bold;
-  }
-  
-  
+}

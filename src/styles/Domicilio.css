@@ -1,82 +1,125 @@
 /* Contenedor principal */
 .domicilio-container {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    height: 100vh;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+  gap: 20px;
+  padding: 20px;
+  height: auto; /* Ajusta la altura según el contenido */
+}
+
+/* Columnas */
+.columna-izquierda,
+.columna-derecha {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Búsqueda por fecha */
+.busqueda-fecha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-fecha {
+  flex: 1;
+  min-width: 150px; /* Evita que el input se vuelva demasiado pequeño */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.boton-buscar {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.boton-buscar:hover {
+  background-color: #0056b3;
+}
+
+/* Resultados de la búsqueda por fecha */
+.resultados-fecha {
+  margin-top: 20px;
+}
+
+.resultados-fecha ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resultados-fecha li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}
+
+/* Lista de domicilios generales */
+.lista-domicilios {
+  max-height: 80vh; /* Altura máxima con deslizador */
+  overflow-y: auto; /* Habilitar deslizador vertical */
+  padding-right: 10px; /* Espacio para el deslizador */
+}
+
+.lista-domicilios ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.lista-domicilios li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}
+
+/* Media queries para hacer el diseño responsive */
+@media (max-width: 1024px) {
+  .domicilio-container {
+      flex-direction: column; /* Apila los elementos en pantallas medianas */
+      align-items: center;
   }
-  
-  /* Columnas */
+
   .columna-izquierda,
   .columna-derecha {
-    flex: 1;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+      width: 100%; /* Ocuparán todo el ancho en pantallas medianas */
   }
-  
-  /* Búsqueda por fecha */
+}
+
+@media (max-width: 768px) {
   .busqueda-fecha {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+      flex-direction: column;
   }
-  
-  .input-fecha {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
+
+  .input-fecha,
   .boton-buscar {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+      width: 100%; /* Para que ocupen todo el ancho en móviles */
   }
-  
-  .boton-buscar:hover {
-    background-color: #0056b3;
+}
+
+@media (max-width: 480px) {
+  .domicilio-container {
+      padding: 10px; /* Reduce el espacio para móviles */
   }
-  
-  /* Resultados de la búsqueda por fecha */
-  .resultados-fecha {
-    margin-top: 20px;
+
+  .columna-izquierda,
+  .columna-derecha {
+      padding: 15px;
   }
-  
-  .resultados-fecha ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .resultados-fecha li {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: white;
-  }
-  
-  /* Lista de domicilios generales */
+
   .lista-domicilios {
-    max-height: 80vh; /* Altura máxima con deslizador */
-    overflow-y: auto; /* Habilitar deslizador vertical */
-    padding-right: 10px; /* Espacio para el deslizador */
+      max-height: 60vh; /* Reduce la altura máxima en pantallas pequeñas */
   }
-  
-  .lista-domicilios ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .lista-domicilios li {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: white;
-  }
+}
